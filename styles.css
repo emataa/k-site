@@ -2,31 +2,67 @@
 
 body{
     background-color: #232946;
+    margin: 0px;
+    overflow: hidden;
 }
 
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    background-color: transparent; 
+    z-index: 999; 
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Lexend', sans-serif;
+
+}
+
+canvas {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
 .links{
     display: flex;
     justify-content: flex-end;
-    text-decoration: none;
+    align-items: center;
+    font-size: 18px;
 }
 
 
-.links li{
-    margin-left: 20px;
+.links li, .links li a{
     list-style-type: none;
-    font-family: 'Lexend', sans-serif;
-}
-
-.links li a{
     text-decoration: none;
     color: #fffffe;
+    padding: 3px;
+
 }
 
-.header{
-    margin: 10px
-}
 
+.navbar-left{
+    color:#fffffe;
+    padding: 10px;
+    margin-left: 20px;
+}
+.navbar-right{
+    margin-right: 20px;
+
+}
 
 .welcome{
     display: flex;
@@ -34,6 +70,10 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+    z-index: 1; 
+    text-align: center; 
+    padding: 20px; 
 }
 
 .intro-wrapper{
@@ -67,7 +107,7 @@ body{
     margin-top: 10px;
     color: #b8c1ec;
     font-family: Lexend;
-    animation: fadeIn 2s ease-in-out forwards;
+    animation: fadeIn 1s ease-in-out forwards;
     animation-delay: 2s;
     opacity: 0;
   }
