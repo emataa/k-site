@@ -235,12 +235,6 @@ function start() {
         createShootingStar();
     }, shootingStarEmittingInterval);
 
-    window.onfocus = function () {
-      paused = false;
-    };
 
-    window.onblur = function () {
-      paused = true;
-    };
 
 }
